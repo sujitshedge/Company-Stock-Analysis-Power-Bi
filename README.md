@@ -1,107 +1,128 @@
-# Store Analytics Dashboard (Power BI)
+# Stock Analysis Dashboard (Power BI)
 
 # Objective:
-This task aims to create a comprehensive, insightful, and visually appealing dashboard using the provided SuperStoreUS-2015 dataset. The dashboard will assess key performance indicators (KPIs) and present meaningful insights in a clear, actionable format.
 
-# Analysis Conducted (Questions):
+The goal of this project is to create a detailed, insightful, and visually compelling dashboard using stock market data from 1st January 2020 to 11th November 2024. This dashboard analyzes the performance of selected stocks, focusing on key metrics and trends to aid in decision-making and investment strategies.
 
-📈 Display sales, profit, and the percentage of returned orders.
+# Dataset Overview:
 
-📊 Compare month-wise sales.
+The dataset comprises daily trading data for the following stocks:
 
-🏆 Determine the most profitable and most loss-making products.
+HCLTECH.NS
 
-🌎 Identify the location where the highest profits are generated.
+HINDUNILVR.NS
 
-🧩 Analyze sales by customer segment.
+INFY.NS
 
-🛒 Show the sales by product category.
+ITC.NS
 
-💰 Show the profit gained in each region.
+NESTLEIND.NS
 
-📊 Analyze the profit and sales by customer segment.
+TECHM.NS
 
-🏷️ Determine the sales by product sub-category.
+WIPRO.NS
 
-# Solution:
+# Columns in the Dataset:
 
-# Data Cleaning:The following tasks were performed during data cleaning:
+Date: The trading date.
 
-🗑️ Removed unwanted columns from the orders table to reduce unnecessary data.
+Open: The price at market opening.
 
-🔍 Dropped the users table as it was not required for the analysis.
+High: The highest price during the trading session.
 
-✂️ Removed the status column from the returns table since the status information was irrelevant to the analysis.
+Low: The lowest price during the trading session.
 
-# Data Modeling:In this phase, the following steps were taken:
+Close: The price at market close.
 
-🔗 Created a relationship between the orders table and the returns table using the Order ID column.
+Adj Close: The closing price adjusted for splits and dividends.
 
-📅 Created a Date table, essential for time-based analysis. Power BI requires a dedicated date table for optimal performance; without it, Power BI automatically generates multiple date tables in the backend, affecting performance.
+Volume: The number of shares traded.
 
-🔄 Established a relationship between the orders table and the Date table using the date columns.
+# Data Cleaning:
 
-📐 Created a Measure table to store KPIs like Profit, Sales, and the percentage of returned orders. This helps to manage and maintain all the calculated measures in one place.
+To ensure a clean and reliable dataset, the following data cleaning steps were taken:
+
+Removed Duplicates: Ensured no duplicate entries were present in the data.
+
+Handled Missing Values: Any missing data points were either filled using interpolation or removed if deemed unnecessary.
+
+Validated Data Types: Confirmed that date columns were properly formatted as date types and numerical columns retained their correct data types.
+
+Standardized Date Format: Unified the date column to a consistent format for seamless data modeling.
+
+# Data Modeling:
+
+The following steps were implemented during the data modeling phase:
+
+Date Table Creation: Created a separate date table for accurate time-based analysis. Power BI requires a dedicated date table to ensure optimal performance.
+
+Relationships Established: Linked the stock data table to the date table using the date columns.
+
+Measure Table: A measure table was created to store key calculated metrics, including:
+
+Average Volume
+
+Sum of Volume
+
+Min and Max Open, High, Low, Close prices
 
 # Creating Visualizations:
 
-KPIs (Cards):Total Sales, Profit, and Percentage of Returned Orders were displayed using card visuals, providing a quick glance at the overall performance.
+KPIs (Cards):
 
-Month-wise Sales Comparison (Line Chart):A line chart was created to compare month-wise sales, which revealed that:
+Displayed the following KPIs using card visuals for an at-a-glance summary:
 
-📉 March 2015 had the lowest sales.
+Average Volume
 
-📈 April 2015 had the highest sales.
+Total Volume
 
-Profit by Product (Bar Chart):A bar chart was used to show profit by product. The analysis indicated:
+Min/Max of Open, High, Low, Close prices
 
-💼 Binders and Binder Accessories were the most profitable products across all states.
+# Time Series Analysis (Line Chart):
 
-Profit by Location (Map Chart):A map chart was created to show profits by state, revealing that:
+A line chart was created to show trends in the sum of low, sum of high, and average volume by month and year. Key insights:
 
-🌞 California had the highest profit.
+Identified periods of high and low trading activity.
 
-🌧️ North Carolina had the lowest profit.
+Visualized trends over the multi-year period.
 
-Sales by Customer Segment (Donut Chart):A donut chart was used to analyze sales by customer segments, and it was found that:
+Quarterly and Categorical Analysis (Donut and Pie Charts):
 
-🏪 The Small Business segment had the lowest sales.
+Sum of Volume by Quarters: Displayed in a donut chart to visualize trading volume distribution across Q1, Q2, Q3, and Q4.
 
-Sales and Profit by Product Category (Clustered Column Chart):A Clustered Column Chart was used to analyze sales and profit by product category, providing information about the highest- and lowest-generating product categories in terms of sales and profit.
+Average Volume by Stock: A bar chart was used to compare average trading volumes across the selected stocks.
 
-Profit and Sales by Region (Clustered Column Chart):A Clustered Column Chart was used to analyze sales and profit by each region, giving information about the highest and lowest sales and profit-generating regions.
+# Min/Max Prices (KPIs):
 
-Sales by Product Sub-category (Treemap Chart):A Treemap Chart was created to show the sales by product sub-category. The analysis shows that:
+ Displayed as individual cards to highlight:
 
-🖨️ Office Machines has the highest sales.
+Min of Open, High, Low, Close prices
 
-🏷️ Rubber Band has the lowest sales.
-
-Profit by Customer Segment (Pie Chart):A Pie Chart was created to show the Profit by Customer segment:
-
-💸 Small Business has the highest profit.
-
-🏠 Consumer has the lowest profit.
-
-Sales by Customer Segment (Pie Chart):A Pie Chart was created to show the Sales by Customer segment:
-
-🏢 Corporate segment has the highest sales.
-
-🏪 Small Business has the lowest sales.
+Max of Open, High, Low, Close prices
 
 # Filters (Slicers):
-Created four slicers to allow users to interactively filter the data based on different fields such as date, product category, state, and customer segment.
+
+Interactive slicers were created for user flexibility, allowing filtering based on:
+
+Stock selection: Users can choose specific stocks for targeted analysis.
+
+Date range: Users can filter data to analyze specific periods.
+
+Quarters: Filter data based on quarters for seasonal trend analysis.
 
 # Color Coding in Visuals:
 
-🔵 Dark blue was used to denote the highest values (e.g., highest sales, highest profit).
+Dark green: Indicates highest values (e.g., maximum prices, highest volume).
 
-⚪ Grey was used to denote the lowest values (e.g., lowest sales, lowest profit).
+Light green/Teal: Used for mid-range values.
+
+Grey: Denotes the lowest values (e.g., minimum prices, lowest volume).
 
 # Dashboard Screenshot:
-# ![Company-Stock-Analysis-Power-Bi](images/dashboard.jpeg)
+ ![Company-Stock-Analysis-Power-Bi](images/dashboard.jpeg)
 
 # Conclusion:
-The Super Store Analytics Dashboard provides a comprehensive overview of key performance indicators (KPIs) for the SuperStoreUS-2015 dataset, offering valuable insights into sales, profit, and customer behavior. By cleaning, modeling, and visualizing the data, the dashboard allows for easy exploration and in-depth analysis. Key findings, such as the highest and lowest sales, profitable and loss-making products, and performance across customer segments and regions, are presented through intuitive visualizations.
-With interactive filters and consistent color coding, users can effortlessly navigate and customize their view of the data. The dashboard equips stakeholders with actionable insights to make informed decisions, optimize product performance, and strategically target regions and customer segments for improved profitability and growth. This project demonstrates the power of Power BI in transforming raw data into meaningful, actionable intelligence for business decision-making.
 
+The Stock Analysis Dashboard provides a comprehensive overview of key performance metrics for the selected stocks, allowing stakeholders to understand market trends, identify high and low trading periods, and make informed investment decisions. The interactive nature of the dashboard, coupled with consistent color coding, enhances user experience by enabling easy navigation and customized analysis.
+
+This project highlights the power of Power BI in transforming complex stock market data into a clear, actionable, and visually engaging format.
