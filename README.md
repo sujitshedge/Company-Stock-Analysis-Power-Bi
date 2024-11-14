@@ -1,8 +1,9 @@
-Store Analytics Dashboard (Power BI)
+# Company Store Analytics Dashboard (Power BI)
 
-Objective:This task aims to create a comprehensive, insightful, and visually appealing dashboard using the provided SuperStoreUS-2015 dataset. The dashboard will assess key performance indicators (KPIs) and present meaningful insights in a clear, actionable format.
+# Objective:
+This task aims to create a comprehensive, insightful, and visually appealing dashboard using the provided SuperStoreUS-2015 dataset. The dashboard will assess key performance indicators (KPIs) and present meaningful insights in a clear, actionable format.
 
-Analysis Conducted (Questions):
+# Analysis Conducted (Questions):
 
 📈 Display sales, profit, and the percentage of returned orders.
 
@@ -22,9 +23,9 @@ Analysis Conducted (Questions):
 
 🏷️ Determine the sales by product sub-category.
 
-Solution:
+# Solution:
 
-Data Cleaning:The following tasks were performed during data cleaning:
+# Data Cleaning:The following tasks were performed during data cleaning:
 
 🗑️ Removed unwanted columns from the orders table to reduce unnecessary data.
 
@@ -32,7 +33,7 @@ Data Cleaning:The following tasks were performed during data cleaning:
 
 ✂️ Removed the status column from the returns table since the status information was irrelevant to the analysis.
 
-Data Modeling:In this phase, the following steps were taken:
+# Data Modeling:In this phase, the following steps were taken:
 
 🔗 Created a relationship between the orders table and the returns table using the Order ID column.
 
@@ -42,7 +43,7 @@ Data Modeling:In this phase, the following steps were taken:
 
 📐 Created a Measure table to store KPIs like Profit, Sales, and the percentage of returned orders. This helps to manage and maintain all the calculated measures in one place.
 
-Creating Visualizations:
+# Creating Visualizations:
 
 KPIs (Cards):Total Sales, Profit, and Percentage of Returned Orders were displayed using card visuals, providing a quick glance at the overall performance.
 
@@ -88,18 +89,19 @@ Sales by Customer Segment (Pie Chart):A Pie Chart was created to show the Sales 
 
 🏪 Small Business has the lowest sales.
 
-Filters (Slicers):Created four slicers to allow users to interactively filter the data based on different fields such as date, product category, state, and customer segment.
+# Filters (Slicers):
+Created four slicers to allow users to interactively filter the data based on different fields such as date, product category, state, and customer segment.
 
-Color Coding in Visuals:
+# Color Coding in Visuals:
 
 🔵 Dark blue was used to denote the highest values (e.g., highest sales, highest profit).
 
 ⚪ Grey was used to denote the lowest values (e.g., lowest sales, lowest profit).
 
-Dashboard Screenshot:
+# Dashboard Screenshot:
+# ![Company-Stock-Analysis-Power-Bi](images/dashboard.jpeg)
 
-
-Conclusion:The Super Store Analytics Dashboard provides a comprehensive overview of key performance indicators (KPIs) for the SuperStoreUS-2015 dataset, offering valuable insights into sales, profit, and customer behavior. By cleaning, modeling, and visualizing the data, the dashboard allows for easy exploration and in-depth analysis. Key findings, such as the highest and lowest sales, profitable and loss-making products, and performance across customer segments and regions, are presented through intuitive visualizations.
-
+# Conclusion:
+The Super Store Analytics Dashboard provides a comprehensive overview of key performance indicators (KPIs) for the SuperStoreUS-2015 dataset, offering valuable insights into sales, profit, and customer behavior. By cleaning, modeling, and visualizing the data, the dashboard allows for easy exploration and in-depth analysis. Key findings, such as the highest and lowest sales, profitable and loss-making products, and performance across customer segments and regions, are presented through intuitive visualizations.
 With interactive filters and consistent color coding, users can effortlessly navigate and customize their view of the data. The dashboard equips stakeholders with actionable insights to make informed decisions, optimize product performance, and strategically target regions and customer segments for improved profitability and growth. This project demonstrates the power of Power BI in transforming raw data into meaningful, actionable intelligence for business decision-making.
 
