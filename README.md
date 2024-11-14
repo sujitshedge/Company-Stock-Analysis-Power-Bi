@@ -1,4 +1,4 @@
-# Company Store Analytics Dashboard (Power BI)
+# Store Analytics Dashboard (Power BI)
 
 # Objective:
 This task aims to create a comprehensive, insightful, and visually appealing dashboard using the provided SuperStoreUS-2015 dataset. The dashboard will assess key performance indicators (KPIs) and present meaningful insights in a clear, actionable format.
